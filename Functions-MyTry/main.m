@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-NSString *getRandomMake(NSArray *makes){
-    int maximum = (int)[makes count];
-    int randomIndex = arc4random_uniform(maximum);
-    return makes[randomIndex];
-}
+//Declaration
 
+NSString *getRandomMake(NSArray *);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -24,4 +21,13 @@ int main(int argc, const char * argv[]) {
         
     }
     return 0;
+}
+
+//implementation
+NSString *getRandomMake(NSArray *makes) {
+    int maximum = (int)[makes count];
+    int randomIndex = arc4random_uniform(maximum);
+    return makes[randomIndex];
+    
+    
 }
