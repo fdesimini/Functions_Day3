@@ -8,26 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-//Declaration
+int getRandomInteger(int minValue, int maxValue) {
+    return arc4random_uniform((maxValue - minValue) +1) + minValue;
+}
 
-NSString *getRandomMake(NSArray *);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        int randomNumber = getRandomInteger(-10, 10);
+        NSLog(@"Selecting a random number between -10 and 10 is %i", randomNumber);
+        int randomNumberTwo = getRandomInteger(30, 75);
+        NSLog(@"random number between 30 and 75 is %i", randomNumberTwo);
         
-        NSArray *makes = @[@"Honda", @"Ford", @"Nissan", @"Porsche"];
-        NSLog(@"Selected a %@", getRandomMake(makes));
-        
-        
-    }
+           }
+    
     return 0;
-}
-
-//implementation
-NSString *getRandomMake(NSArray *makes) {
-    int maximum = (int)[makes count];
-    int randomIndex = arc4random_uniform(maximum);
-    return makes[randomIndex];
-    
-    
 }
