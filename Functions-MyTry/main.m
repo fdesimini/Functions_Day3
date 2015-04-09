@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
  */
-
+/*
 NSString *getRandomManufacturer(NSArray *manufacturerName) {
     int maximum = (int)[manufacturerName count];
     int randomIndex = arc4random_uniform(maximum);
@@ -40,3 +40,28 @@ int main(int argc, const char * argv[]) {
            }
     return 0;
 }
+*/
+
+//Declaration of the function
+
+NSString *getRandomManufacturer(NSArray *);
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSArray *manufacturerName = @[@"Honda", @"Ford", @"Nissan", @"Porsche"];
+        NSLog(@"randomly select the following manufacturer %@", getRandomManufacturer(manufacturerName));
+    }
+    return 0;
+}
+
+//Implementation
+
+NSString *getRandomManufacturer(NSArray *manufacturerName)
+{
+    int maximum = (int)[manufacturerName count];
+    int randomIndex = arc4random_uniform(maximum);
+    return manufacturerName[randomIndex];
+}
+
+
+
