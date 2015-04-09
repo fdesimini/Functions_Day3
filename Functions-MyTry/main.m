@@ -50,6 +50,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSArray *manufacturerName = @[@"Honda", @"Ford", @"Nissan", @"Porsche"];
         NSLog(@"randomly select the following manufacturer %@", getRandomManufacturer(manufacturerName));
+        NSArray *manufacturerNameNew = @[@"Ferrari", @"Bugatti", @"McLaren"];
+        NSLog(@"randomly generated cool manufact %@", getRandomManufacturer(manufacturerNameNew));
     }
     return 0;
 }
